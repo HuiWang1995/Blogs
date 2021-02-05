@@ -212,7 +212,7 @@ drwxr-xr-x 9 wanglh wanglh  4096 2月   4 21:51 ..
 
 wanglh@dark:~/IdeaProjects/skywalking-plugin-example/apache-skywalking-apm-bin-es7/agent/plugins$ ls -al *foo*
 -rw-r--r-- 1 wanglh wanglh 6999 2月   5 20:58 skywalking-plugin-foo-1.0-SNAPSHOT.jar
-wanglh@dark:~/IdeaProjects/skywalking-plugin-example/apache-skywalking-apm-bin-es7/agent/plugins$ 
+wanglh@dark:~/IdeaProjects/skywalking-plugin-example/apache-skywalking-apm-bin-es7/agent/plugins$
 
 ```
 
@@ -228,7 +228,7 @@ wanglh@dark:~/IdeaProjects/skywalking-plugin-example/apache-skywalking-apm-bin-e
 
 ### 访问URL
 
-方式不变,仍为: 
+方式不变,仍为:
 
 ```shell
 curl http://localhost:8081/foo?p=a
@@ -263,4 +263,4 @@ curl http://localhost:8081/foo?p=a
 
 实际图也可以观察到生效了:
 
-![image-20210205210937802](/home/wanglh/Documents/Blogs/skywalking/pic/c05/03.png)
+![image-20210205210937802](pic/c05/03.png)
