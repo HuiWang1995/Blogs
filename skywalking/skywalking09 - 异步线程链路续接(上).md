@@ -126,6 +126,3 @@ jdkthreading.threading_class_prefixes=com.aaa.bbb,com.bbb.ccc
 ## 总结
 
 多线程可能会导致链路断开，我们的链路续接不上，很多问题就没有办法查，要根据合适的方式，将链路接上。
-
-
-
