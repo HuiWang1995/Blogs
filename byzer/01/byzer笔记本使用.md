@@ -43,7 +43,7 @@ jdbc数据源类型新增的方法即是上传对应的驱动包到`${BYZER_HOME
 
 5. oracle
 
-**目前已经覆盖本部门批量(imapla)+实时(clickhouse)的数据来源场景。** 
+**目前已经覆盖本部门批量(impala)+实时(clickhouse)的数据来源场景。** 
 
 也可以在OLTP类型的源数据库(oracle)进行实时分析，预测OceanBase同样也是可以支持的。
 
