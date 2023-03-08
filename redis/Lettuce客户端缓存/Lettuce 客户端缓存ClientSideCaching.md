@@ -52,9 +52,11 @@ ClientSideCaching 将一个本地Map 与一个Redis连接StatefulRedisConnection
 
 1. 虽然连接会自动重连，但是在连接断开时，本地Map中数据不会清除（无监听断连）。即使重连后，也不会更新。所以一致性问题巨大。
 2. 稍微有点离谱的是，在get为null时，通过valueLoader get实际数据后，要对redis 进行 set、get两次操作。
-虽然get无可避免，需要进行一个get操作，redis服务器才会记录当前客户端存下了这个key，后续有更新才会通知，但是这个get大可走异步。
-3. valueLoader.call() 获取实际数据值仍为null 时，将会抛出异常，即缓存中不能存null， 这点就需要开发注意。
-4. 没有数量限制、没有清除策略、没有超时时间，也没有重连策略。
+虽然get无可避免，需要进行一个get操作，redis服务器才会记录当前客户端存下了这个key，后续有更新才会通知，
+但是这个get大可走异步,或者两步操作走Lua。
+3. 当前仅支持KV(String)形式，对HASH、SET等均不支持。
+4. valueLoader.call() 获取实际数据值仍为null 时，将会抛出异常，即缓存中不能存null， 这点就需要开发注意。
+5. 没有数量限制、没有清除策略、没有超时时间，也没有重连策略。
 
 ## 意外的发现
 
